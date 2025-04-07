@@ -1,0 +1,36 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <ion-item>
+    <ion-label position="stacked">Кількість предметів:</ion-label>
+    <ion-input type="number" formControlName="courseCount" min="1" max="10"></ion-input>
+  </ion-item>
+
+  <div formArrayName="courses">
+    <div *ngFor="let course of courses.controls; let i = index" [formGroupName]="i">
+      <ion-item>
+        <ion-label>Предмет {{i + 1}}</ion-label>
+      </ion-item>
+      
+      <ion-item>
+        <ion-label position="stacked">Тип предмету</ion-label>
+        <ion-select formControlName="type">
+          <ion-select-option value="ліцензійний">Ліцензійний</ion-select-option>
+          <ion-select-option value="магістерський">Магістерський</ion-select-option>
+          <ion-select-option value="науковий">Науковий</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Рівень складності</ion-label>
+        <ion-select formControlName="difficulty">
+          <ion-select-option value="легкий">Легкий</ion-select-option>
+          <ion-select-option value="середній">Середній</ion-select-option>
+          <ion-select-option value="складний">Складний</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </div>
+  </div>
+
+  <ion-button type="submit" expand="block" [disabled]="!form.valid">
+    Розрахувати вартість
+  </ion-button>
+</form>

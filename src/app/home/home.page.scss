@@ -1,0 +1,21 @@
+.page-header {
+  text-align: center;
+  padding: 16px 0;
+  
+  .header-info {
+    font-family: var(--organic-font);
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.5;
+    margin-top: 8px;
+  }
+}
+
+.task-description {
+  font-family: var(--organic-font);
+  text-align: center;
+  color: #555;
+  line-height: 1.6;
+  padding: 0 16px;
+  margin-bottom: 24px;
+}

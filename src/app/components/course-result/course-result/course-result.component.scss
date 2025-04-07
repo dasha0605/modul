@@ -1,0 +1,52 @@
+:host {
+    display: block;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 16px;
+  }
+  
+  .result-card {
+    background: #ffffff;
+    border-left: 4px solid var(--ion-color-primary);
+    
+    ion-card-header {
+      padding-bottom: 0;
+      
+      ion-card-title {
+        font-size: 1.4rem;
+        color: var(--ion-color-primary);
+      }
+    }
+  }
+  
+  .result-item {
+    --padding-start: 0;
+    --inner-padding-end: 0;
+    --min-height: 48px;
+  
+    ion-label {
+      font-size: 1rem;
+      color: #555;
+    }
+  
+    ion-note {
+      font-size: 1rem;
+      color: #222;
+    }
+  }
+  
+  .final-price {
+    ion-label, ion-note {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--ion-color-primary);
+    }
+  }
+  
+  .discount-badge {
+    color: #28a745;
+  }
+  
+  .surcharge-badge {
+    color: #dc3545;
+  }

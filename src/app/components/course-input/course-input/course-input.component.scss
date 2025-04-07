@@ -1,0 +1,62 @@
+:host {
+    display: block;
+    padding: 16px;
+  }
+  
+  .form-container {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .course-item {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 16px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  }
+  
+  .course-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+  
+    ion-label {
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: var(--ion-color-primary);
+    }
+  }
+  
+  .course-controls {
+    ion-item {
+      --background: #f9f9f9;
+      --padding-start: 0;
+      --inner-padding-end: 0;
+    }
+  }
+  
+  .submit-button {
+    margin-top: 24px;
+    --padding-top: 18px;
+    --padding-bottom: 18px;
+  }
+  .course-header {
+    ion-label {
+      font-weight: 700 !important; /* Жирний текст для предметів */
+      font-size: 1.2rem;
+      color: var(--ion-color-primary);
+    }
+  }
+  
+  /* Стилі для полів вводу */
+  ion-item {
+    ion-label {
+      font-weight: 500; /* Напівжирний для підписів */
+    }
+    
+    ion-input, ion-select {
+      font-weight: 600; /* Жирніший текст у полях вводу */
+    }
+  }

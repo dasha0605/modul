@@ -1,0 +1,27 @@
+<ion-card *ngIf="result" class="result-card">
+  <ion-card-header>
+    <ion-card-title>Результати розрахунку</ion-card-title>
+  </ion-card-header>
+
+  <ion-card-content>
+    <ion-item class="result-item">
+      <ion-label>Загальна вартість:</ion-label>
+      <ion-note slot="end" class="price-value">{{ result.totalCost | number }}</ion-note>
+    </ion-item>
+
+    <ion-item *ngIf="result.discount > 0" class="discount-badge">
+      <ion-label>Знижка  {{result.difficultCoursesCount > 5 ? '>5 предметів' : ''}}:</ion-label>
+      <ion-note slot="end">{{ result.discount }}%</ion-note>
+    </ion-item>
+
+    <ion-item *ngIf="result.surcharge > 0" class="surcharge-badge">
+      <ion-label>Націнка ({{result.difficultCoursesCount}} скл. предмети):</ion-label>
+      <ion-note slot="end">{{ result.surcharge }}% ({{result.difficultCoursesCount}} × 15%)</ion-note>
+    </ion-item>
+
+    <ion-item class="final-price">
+      <ion-label><strong>До сплати:</strong></ion-label>
+      <ion-note slot="end" class="price-value">{{ result.finalCost | number }} грн</ion-note>
+    </ion-item>
+  </ion-card-content>
+</ion-card>
